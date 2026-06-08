@@ -1,4 +1,0 @@
-interface:
-  display_name: "Session Handoff"
-  short_description: "生成可粘贴到新会话的交接上下文"
-  default_prompt: "Use $session-handoff to generate a copy-pasteable starter prompt for continuing this long conversation in a new AI session."
