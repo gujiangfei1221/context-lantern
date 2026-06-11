@@ -28,9 +28,10 @@ Before writing the prompt, silently identify:
 2. User constraints, preferences, scope limits, and explicit instructions.
 3. Decisions already made and the reasoning that still matters.
 4. Work completed, work in progress, and current blockers.
-5. Files, commands, tools, links, or artifacts mentioned.
-6. Failed attempts or paths the next session should not repeat.
-7. The best next action after the user confirms the receiving session may proceed.
+5. Verification commands already run, their results, and checks that were not run.
+6. Files, commands, tools, links, or artifacts mentioned.
+7. Failed attempts or paths the next session should not repeat.
+8. The best next action after the user confirms the receiving session may proceed.
 
 Use this file content structure unless the user requests a different format:
 
@@ -54,6 +55,11 @@ Use this file content structure unless the user requests a different format:
 
 ## 当前状态
 - ...
+
+## 验证命令 / 结果
+- 已运行：...
+- 结果：...
+- 未运行 / 待验证：...
 
 ## 相关文件 / 目录 / 工具
 - ...
@@ -85,6 +91,7 @@ Quality checks before responding:
 - The response is concise and includes the absolute file path.
 - The next session can answer: "what is the goal, what is done, what remains, what should I inspect first after confirmation?"
 - There is no unsupported claim such as "tests passed" unless the conversation contains that evidence.
+- Verification is explicit: commands that were run, commands that were not run, and unknown results are clearly separated.
 - The handoff does not include obsolete ideas as current instructions.
 - Recommended next steps are actionable, ordered, and gated behind user confirmation.
 
